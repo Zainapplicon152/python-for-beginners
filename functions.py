@@ -36,8 +36,28 @@ arg_function(name='zain', age=22)  # dont know wht is 22 #so from this we know w
 
 
 # defualt arguments
-def default_arg(gender="male"):  # default value in  function defining #default arguments are always write on end but with keyword args
+def default_arg(
+        gender="male"):  # default value in  function defining #default arguments are always write on end but with keyword args
     return gender
 
 
 print(default_arg())
+
+
+# *arg and **args
+# *args => pass multiple parameters as a single argument ///// output = tuples
+def student(*student):
+    print('tuples')
+    print(student)
+
+
+student('zain', 22, 'lahore', 'Laravel developer')
+
+
+# **args => passing keywords parameters //// output = dictonires
+def malik(**student):
+    print('dictonary')
+    print(student)
+
+
+malik(name='zain', age=22, address='lahore')
